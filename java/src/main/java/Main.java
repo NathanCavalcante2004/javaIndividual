@@ -47,6 +47,7 @@ public class Main {
         System.out.println("Digite sua senha");
         String senhaNovo = leitorStr.next();
 
+
         HospitalRepositorio hospitalRepositorio = new HospitalRepositorio(conn);
         hospitalRepositorio.autenticarHospital(cnpjNovo, senhaNovo);
        Hospital hospitalNovo = hospitalRepositorio.autenticarHospital(cnpjNovo, senhaNovo);
@@ -74,20 +75,14 @@ public class Main {
         System.out.println("Digite o nome do computador");
         computador.setnome(leitorStr.next());
 
-        System.out.println("Digite o Modelo do processador");
-        computador.setModeloProcessador(leitorStr.next());
+
 
         System.out.println("Digite o codigo de patrimonio");
-
         computador.setCodPatrimonio(leitorStr.next());
+
         System.out.println("Digite a senha:");
-
         String senha = leitorStr.next();
-        System.out.println("Digite o gbRAM:");
-        computador.setMaxRam(leitorStr.nextInt());
 
-        System.out.println("Digite o gbDisco:");
-        computador.setMaxDisco(leitorStr.nextInt());
 
         ComputadorRepositorio computadorRepositorio = new ComputadorRepositorio(conn);
         computadorRepositorio.cadastrarComputador(computador, senha);

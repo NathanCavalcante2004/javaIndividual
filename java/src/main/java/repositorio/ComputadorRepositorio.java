@@ -35,7 +35,7 @@ public class ComputadorRepositorio {
         return computadorEncontrado;
     }
     public void cadastrarComputador(Computador computador,String senha){
-        conn.execute("INSERT INTO computador (nome,modeloProcessador,codPatrimonio,senha,gbRam,gbDisco,fkDepartamento,fkHospital) VALUES ('" + computador.getNome() +"', '" + computador.getNomeProcessador() +"','"+ computador.getCodPatrimonio()+ "','"+ senha +"',"+ computador.getMaxRam()+","+ computador.getMaxDisco()+","+ computador.getFkDepartamento()+","+ computador.getFkHospital()+")");
+        conn.execute("INSERT INTO computador (nome,modeloProcessador,codPatrimonio,senha,gbRam,gbDisco,fkDepartamento,fkHospital) VALUES ('" + computador.getNome() +"', '" + computador.getNomeProcessador() +"','"+ computador.getCodPatrimonio()+ "','"+ senha +"',"+ computador.getPorcentagemConsumoMemoria()+ ","+ computador.getPorcentagemConsumoCpu()+","+ computador.getFkDepartamento()+","+ computador.getFkHospital()+")");
     }
 
 }
